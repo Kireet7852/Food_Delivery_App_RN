@@ -3,13 +3,16 @@ import '@unistyles/unistyles';
 import Navigation from '@navigation/Navigation';
 import {PersistGate} from 'redux-persist/integration/react';
 import {persistor, store} from '@states/store';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const App = () => {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <Navigation />
+        <GestureHandlerRootView style={{flex: 1}}>
+          <Navigation />
+        </GestureHandlerRootView>
       </PersistGate>
     </Provider>
   );
