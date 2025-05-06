@@ -1,4 +1,4 @@
-import {View, Text, ScrollView, Image} from 'react-native';
+import {View, Text, ScrollView, Image, FlatList} from 'react-native';
 import React from 'react';
 import {ScalePress} from '@components/ui/ScalePress';
 import {useStyles} from 'react-native-unistyles';
